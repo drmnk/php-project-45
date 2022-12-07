@@ -11,5 +11,10 @@
             "email": "deromanenko@gmail.com"
         }
     ],
-    "require": {}
+    "bin": [
+        "bin/brain-games"
+    ],
+    "require": {},
+    "description": "Student project",
+    "license": "proprietary"
 }
