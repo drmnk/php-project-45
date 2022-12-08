@@ -5,5 +5,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use function BrainGames\Cli\greet;
+use function BrainGames\Cli\game;
 
-greet();
+$name = greet();
+game($name);
