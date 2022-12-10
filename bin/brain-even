@@ -23,7 +23,6 @@ while ($correctAnswers < 3) {
     $userAnswer = askQuestion($question);
     if ($userAnswer !== $answer) {
         lose($userAnswer, $answer);
-        return 0;
     }
     $correctAnswers++;
 }
