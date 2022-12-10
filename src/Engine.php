@@ -13,10 +13,10 @@ function greet(string $gameName): string
     return $name;
 }
 
-function lose($answer, $correct)
+function lose($answer, $correct, $name)
 {
     line("'{$answer}' is wrong answer ;(. Correct answer was '{$correct}'.");
-    line("Let's try again!");
+    line("Let's try again,{$name}!");
     return true;
 }
 

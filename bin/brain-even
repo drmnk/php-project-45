@@ -25,7 +25,7 @@ while ($correctAnswers < 3) {
     ['question' => $question, 'answer' => $answer] = createQuestionAndAnswer();
     $userAnswer = askQuestion($question);
     if ($userAnswer !== $answer) {
-        lose($userAnswer, $answer);
+        lose($userAnswer, $answer, $name);
         exit;
     } else {
         correct();
