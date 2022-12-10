@@ -7,7 +7,7 @@ use function cli\prompt;
 
 function greet(string $gameName): string
 {
-    line("Welcome to the {$gameName}");
+    line("Welcome to the {$gameName}!");
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     return $name;
