@@ -1,0 +1,33 @@
+#!/usr/bin/env php
+
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use function BrainGames\Engine\greet;
+use function BrainGames\Engine\askQuestion;
+use function BrainGames\Engine\lose;
+use function BrainGames\Engine\congratulate;
+
+use function BrainGames\Games\Gcd\gameName;
+use function BrainGames\Games\Gcd\describeGame;
+use function BrainGames\Games\Gcd\createQuestionAndAnswer;
+
+// Приветствуем игрока
+$name = greet(gameName());
+
+// Описываем игровой процесс
+describeGame();
+
+$correctAnswers = 0;
+
+while ($correctAnswers < 3) {
+    ['question' => $question, 'answer' => $answer] = createQuestionAndAnswer();
+    $userAnswer = askQuestion($question);
+    if ((int) $userAnswer !== (int) $answer) {
+        lose($userAnswer, $answer);
+        return;
+    }
+    $correctAnswers++;
+}
+congratulate($name);
