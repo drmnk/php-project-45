@@ -13,6 +13,9 @@ brain-gcd:
 brain-progression:
 	./bin/brain-progression
 
+brain-simple:
+	./bin/brain-simple
+
 validate:
 	composer validate
 
