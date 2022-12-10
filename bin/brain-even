@@ -14,6 +14,7 @@ use function BrainGames\Games\Even\describeGame;
 use function BrainGames\Games\Even\createQuestionAndAnswer;
 
 // Описываем игровой процесс
+$name = greet('Brain Games');
 describeGame();
 
 $correctAnswers = 0;
@@ -23,6 +24,7 @@ while ($correctAnswers < 3) {
     $userAnswer = askQuestion($question);
     if ($userAnswer !== $answer) {
         lose($userAnswer, $answer);
+        continue;
     }
     $correctAnswers++;
 }
