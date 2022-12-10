@@ -9,9 +9,9 @@ use function BrainGames\Engine\askQuestion;
 use function BrainGames\Engine\lose;
 use function BrainGames\Engine\congratulate;
 
-use function BrainGames\Games\Guess\gameName;
-use function BrainGames\Games\Guess\describeGame;
-use function BrainGames\Games\Guess\createQuestionAndAnswer;
+use function BrainGames\Games\Calc\gameName;
+use function BrainGames\Games\Calc\describeGame;
+use function BrainGames\Games\Calc\createQuestionAndAnswer;
 
 // Приветствуем игрока
 $name = greet(gameName());
@@ -24,7 +24,7 @@ $correctAnswers = 0;
 while ($correctAnswers < 3) {
     ['question' => $question, 'answer' => $answer] = createQuestionAndAnswer();
     $userAnswer = askQuestion($question);
-    if ($userAnswer !== $answer) {
+    if ((int) $userAnswer !== (int) $answer) {
         lose($userAnswer, $answer);
         return;
     }

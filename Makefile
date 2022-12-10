@@ -4,6 +4,9 @@ install:
 brain-games:
 	./bin/brain-games
 
+brain-calc:
+	./bin/brain-calc
+
 validate:
 	composer validate
 
