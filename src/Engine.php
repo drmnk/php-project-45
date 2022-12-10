@@ -22,7 +22,13 @@ function lose($answer, $correct)
 
 function askQuestion($question)
 {
-    return prompt($question);
+    line($question);
+    return prompt('Your answer');
+}
+
+function correct()
+{
+    line('Correct!');
 }
 
 function congratulate($name)

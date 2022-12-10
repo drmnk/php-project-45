@@ -7,6 +7,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use function BrainGames\Engine\greet;
 use function BrainGames\Engine\askQuestion;
 use function BrainGames\Engine\lose;
+use function BrainGames\Engine\correct;
 use function BrainGames\Engine\congratulate;
 use function BrainGames\Engine\describeGame;
 
@@ -26,6 +27,7 @@ while ($correctAnswers < 3) {
     if ($userAnswer !== $answer) {
         lose($userAnswer, $answer);
     } else {
+        correct();
         $correctAnswers++;
     }
 }
