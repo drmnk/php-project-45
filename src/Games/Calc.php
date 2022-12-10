@@ -27,18 +27,18 @@ function createQuestionAndAnswer()
     $question = '';
 
     switch ($operation) {
-    case '-':
-        $answer = $number1 - $number2;
-        $question = "Question: {$number1} - {$number2}?";
-        break;
-    case '+':
-        $answer = $number1 + $number2;
-        $question = "Question: {$number1} + {$number2}?";
-        break;
-    case '*':
-        $answer = $number1 * $number2;
-        $question = "Question: {$number1} * {$number2}?";
-        break;
+        case '-':
+            $answer = $number1 - $number2;
+            $question = "Question: {$number1} - {$number2}?";
+            break;
+        case '+':
+            $answer = $number1 + $number2;
+            $question = "Question: {$number1} + {$number2}?";
+            break;
+        case '*':
+            $answer = $number1 * $number2;
+            $question = "Question: {$number1} * {$number2}?";
+            break;
     }
 
     return ['question' => $question, 'answer' => $answer];

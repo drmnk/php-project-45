@@ -13,7 +13,8 @@ function describeGame()
     return 'You need to guess - is the number simple? Answer yes or no.';
 }
 
-function isSimple($number) {
+function isSimple($number)
+{
     $simple = true;
 
     for ($i = 2; $i < $number; $i++) {
@@ -22,7 +23,6 @@ function isSimple($number) {
         }
     }
     return $simple;
-
 }
 
 // Функция "поставить условие"

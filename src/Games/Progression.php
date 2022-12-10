@@ -13,13 +13,14 @@ function describeGame()
     return 'Fill the hole in progression';
 }
 
-function getProgressionArray() {
+function getProgressionArray()
+{
     $arr = [];
     $length = rand(5, 15);
     $arr[] = rand(0, 5);
     $step = rand(1, 3);
     for ($i = 0; $i < $length; $i++) {
-        $arr[] = $arr[count($arr) -1] + $step;
+        $arr[] = $arr[count($arr) - 1] + $step;
     }
     return $arr;
 }
@@ -32,7 +33,7 @@ function createQuestionAndAnswer()
     $progressionArray = getProgressionArray();
 
     $hole_position = rand(0, count($progressionArray) - 1);
-    
+
     $answer = $progressionArray[$hole_position];
     $progressionArray[$hole_position] = '..';
 

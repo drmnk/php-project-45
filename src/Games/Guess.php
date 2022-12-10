@@ -23,7 +23,7 @@ function isEven($number)
 function createQuestionAndAnswer()
 {
     $number = rand(1, 100);
-    $question = "Is {$number} even?";
+    $question = "Question: {$number}";
     $answer = isEven($number) ? 'yes' : 'no';
 
     return ['question' => $question, 'answer' => $answer];
