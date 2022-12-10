@@ -27,7 +27,7 @@ function askQuestion($question)
 
 function congratulate($name)
 {
-    line("Congratulations, {$name}");
+    line("Congratulations, {$name}!");
     return true;
 }
 
