@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Games\Guess;
+namespace BrainGames\Games\Even;
 
 function gameName()
 {
@@ -10,7 +10,7 @@ function gameName()
 // Функция "описать игру"
 function describeGame()
 {
-    return 'Answer "yes" if the number is even, otherwise answer "no"';
+    return 'Answer "yes" if the number is even, otherwise answer "no".';
 }
 
 function isEven($number)

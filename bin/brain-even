@@ -9,12 +9,9 @@ use function BrainGames\Engine\askQuestion;
 use function BrainGames\Engine\lose;
 use function BrainGames\Engine\congratulate;
 
-use function BrainGames\Games\Guess\gameName;
-use function BrainGames\Games\Guess\describeGame;
-use function BrainGames\Games\Guess\createQuestionAndAnswer;
-
-// Приветствуем игрока
-$name = greet(gameName());
+use function BrainGames\Games\Even\gameName;
+use function BrainGames\Games\Even\describeGame;
+use function BrainGames\Games\Even\createQuestionAndAnswer;
 
 // Описываем игровой процесс
 describeGame();
