@@ -8,14 +8,15 @@ use function BrainGames\Engine\greet;
 use function BrainGames\Engine\askQuestion;
 use function BrainGames\Engine\lose;
 use function BrainGames\Engine\congratulate;
+use function BrainGames\Engine\describeGame;
 
+use function BrainGames\Games\Even\gameDescription;
 use function BrainGames\Games\Even\gameName;
-use function BrainGames\Games\Even\describeGame;
 use function BrainGames\Games\Even\createQuestionAndAnswer;
 
 // Описываем игровой процесс
 $name = greet('Brain Games');
-describeGame();
+describeGame(gameDescription());
 
 $correctAnswers = 0;
 

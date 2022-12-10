@@ -8,7 +8,7 @@ function gameName()
 }
 
 // Функция "описать игру"
-function describeGame()
+function gameDescription()
 {
     return 'Answer "yes" if the number is even, otherwise answer "no".';
 }

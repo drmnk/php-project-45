@@ -30,3 +30,9 @@ function congratulate($name)
     line("Congratulations, {$name}");
     return true;
 }
+
+function describeGame($description)
+{
+    line($description);
+    return true;
+}
