@@ -25,9 +25,8 @@ while ($correctAnswers < 3) {
     $userAnswer = askQuestion($question);
     if ($userAnswer !== $answer) {
         lose($userAnswer, $answer);
-        continue;
+    } else {
+        $correctAnswers++;
     }
-    $correctAnswers++;
 }
 congratulate($name);
-return 0;
