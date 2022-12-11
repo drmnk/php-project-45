@@ -2,44 +2,37 @@
 
 namespace BrainGames\Games\Calc;
 
+use function BrainGames\Engine\startGame;
+
 const OPERATIONS = ['-', '+', '*'];
+const TASK = 'What is the result of the expression?';
 
-// имя игры
-function gameName()
+function startCalcGame()
 {
-    return 'Calculations';
-}
+    $gameData = function () {
+        $operation = OPERATIONS[rand(0, 2)];
+        $number1 = rand(0, 100);
+        $number2 = rand(0, 100);
+        $answer = null;
+        $question = '';
+    
+        switch ($operation) {
+            case '-':
+                $answer = $number1 - $number2;
+                $question = "{$number1} - {$number2}?";
+                break;
+            case '+':
+                $answer = $number1 + $number2;
+                $question = "{$number1} + {$number2}?";
+                break;
+            case '*':
+                $answer = $number1 * $number2;
+                $question = "{$number1} * {$number2}?";
+                break;
+        }
+    
+        return ['question' => $question, 'answer' => (string) $answer];
+    };
 
-// Функция "описать игру"
-function describeGame()
-{
-    return 'What is the result of the expression?';
-}
-
-// Функция "поставить условие"
-// Возвращает массив с условием задачи и правильным ответом
-function createQuestionAndAnswer()
-{
-    $operation = OPERATIONS[rand(0, 2)];
-    $number1 = rand(0, 100);
-    $number2 = rand(0, 100);
-    $answer = null;
-    $question = '';
-
-    switch ($operation) {
-        case '-':
-            $answer = $number1 - $number2;
-            $question = "Question: {$number1} - {$number2}?";
-            break;
-        case '+':
-            $answer = $number1 + $number2;
-            $question = "Question: {$number1} + {$number2}?";
-            break;
-        case '*':
-            $answer = $number1 * $number2;
-            $question = "Question: {$number1} * {$number2}?";
-            break;
-    }
-
-    return ['question' => $question, 'answer' => $answer];
+    startGame($gameData, TASK);
 }
