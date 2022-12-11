@@ -46,9 +46,17 @@ use function cli\err;
 
 define('GAME_ROUNDS', 3);
 
+function greet(): string
+{
+    line("Welcome to the Brain Games!");
+    $name = prompt('May I have your name?');
+    line("Hello, {$name}");
+    return $name;
+}
+
 function startGame(callable $gameData, $gameTask)
 {
-    line("Welcome to the Brain Game!");
+    line("Welcome to the Brain Games!");
     line($gameTask);
     $name = prompt("May I have your name?");
     line("Hello, {$name}!");

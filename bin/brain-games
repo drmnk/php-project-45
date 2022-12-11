@@ -8,4 +8,4 @@ use function BrainGames\Engine\greet;
 
 // Приветствуем игрока
 
-return 0;
+greet();
