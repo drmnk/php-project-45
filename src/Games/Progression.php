@@ -1,17 +1,9 @@
 <?php
 
 namespace BrainGames\Games\Progression;
+use function BrainGames\Engine\startGame;
 
-function gameName()
-{
-    return 'Hole in Progression';
-}
-
-// Функция "описать игру"
-function describeGame()
-{
-    return 'Fill the hole in progression';
-}
+const TASK = "What number is missing in the progression?";
 
 function getProgressionArray()
 {
@@ -25,19 +17,20 @@ function getProgressionArray()
     return $arr;
 }
 
-// Функция "поставить условие"
-// Возвращает массив с условием задачи и правильным ответом
-function createQuestionAndAnswer()
+function startProgresionGame()
 {
+    $gameData = function () {
+        $progressionArray = getProgressionArray();
 
-    $progressionArray = getProgressionArray();
+        $hole_position = rand(0, count($progressionArray) - 1);
+    
+        $answer = $progressionArray[$hole_position];
+        $progressionArray[$hole_position] = '..';
+    
+        $question = implode(' ', $progressionArray);
+    
+        return ['question' => $question, 'answer' => (string) $answer];
+    };
 
-    $hole_position = rand(0, count($progressionArray) - 1);
-
-    $answer = $progressionArray[$hole_position];
-    $progressionArray[$hole_position] = '..';
-
-    $question = implode(' ', $progressionArray);
-
-    return ['question' => $question, 'answer' => $answer];
+    startGame($gameData, TASK);
 }
