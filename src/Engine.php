@@ -64,7 +64,7 @@ function startGame(callable $gameData, $gameTask)
     $correctAnswers = 0;
     while ($correctAnswers < GAME_ROUNDS) {
         ['question' => $question, 'answer' => $answer] = $gameData();
-        line($question);
+        line("Question: $question");
         $userAnswer = prompt('Your answer');
         if ($answer !== $userAnswer) {
             err("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$answer}'.");
