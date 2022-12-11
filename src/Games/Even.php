@@ -8,7 +8,7 @@ const TASK = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function isEven(int $number)
 {
-    return $number % 2 === 0 ?? false;
+    return $number % 2 === 0 ? true : false;
 }
 
 function startEvenGame()
