@@ -17,7 +17,7 @@ function getProgressionArray()
     return $arr;
 }
 
-function startProgresionGame()
+function startProgressionGame()
 {
     $gameData = function () {
         $progressionArray = getProgressionArray();
