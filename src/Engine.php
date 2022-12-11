@@ -74,5 +74,5 @@ function startGame(callable $gameData, $gameTask)
         line('Correct');
         $correctAnswers++;
     }
-    line("Congratulations, {$name}");
+    line("Congratulations, {$name}!");
 }
