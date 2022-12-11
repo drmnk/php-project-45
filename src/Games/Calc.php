@@ -15,7 +15,7 @@ function startCalcGame()
         $number2 = rand(0, 100);
         $answer = null;
         $question = '';
-    
+
         switch ($operation) {
             case '-':
                 $answer = $number1 - $number2;
@@ -30,7 +30,6 @@ function startCalcGame()
                 $question = "{$number1} * {$number2}?";
                 break;
         }
-    
         return ['question' => $question, 'answer' => (string) $answer];
     };
 

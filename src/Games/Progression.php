@@ -1,6 +1,7 @@
 <?php
 
 namespace BrainGames\Games\Progression;
+
 use function BrainGames\Engine\startGame;
 
 const TASK = "What number is missing in the progression?";
@@ -23,12 +24,12 @@ function startProgressionGame()
         $progressionArray = getProgressionArray();
 
         $hole_position = rand(0, count($progressionArray) - 1);
-    
+
         $answer = $progressionArray[$hole_position];
         $progressionArray[$hole_position] = '..';
-    
+
         $question = implode(' ', $progressionArray);
-    
+
         return ['question' => $question, 'answer' => (string) $answer];
     };
 

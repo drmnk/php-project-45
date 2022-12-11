@@ -19,9 +19,9 @@ function startGcdGame()
         $number2 = rand(1, 100);
         $question = "{$number1} {$number2}";
         $answer = gcd($number1, $number2);
-    
+
         return ['question' => $question, 'answer' => (string) $answer];
     };
 
-    startGame($gameData, TASK);    
+    startGame($gameData, TASK);
 }
