@@ -16,7 +16,7 @@ function greet(): string
     return $name;
 }
 
-function startGame(callable $gameData, $gameTask)
+function startGame(callable $gameData, string $gameTask)
 {
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");

@@ -6,9 +6,9 @@ use function BrainGames\Engine\startGame;
 
 const TASK = 'Find the greatest common divisor of given numbers.';
 
-function gcd($a, $b)
+function gcd(int $a, int $b)
 {
-    return ($a % $b) ? gcd($b, $a % $b) : abs($b);
+    return ((bool) ($a % $b)) ? gcd($b, $a % $b) : abs($b);
 }
 
 

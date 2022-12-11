@@ -6,9 +6,9 @@ use function BrainGames\Engine\startGame;
 
 const TASK = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function isEven($number)
+function isEven(int $number)
 {
-    return $number % 2 === 0 ?: false;
+    return $number % 2 === 0 ?? false;
 }
 
 function startEvenGame()
